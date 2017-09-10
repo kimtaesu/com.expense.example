@@ -2,6 +2,6 @@ package expensereport;
 
 public class DinnerExpense extends Expense {
     public DinnerExpense(int amount) {
-        super(type, amount);
+        super(Type.DINNER, amount);
     }
 }
