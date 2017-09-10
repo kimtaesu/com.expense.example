@@ -17,6 +17,12 @@ public class ExpenseReport {
 
         totalsUpExpenses();
 
+        printExpenses(printer);
+
+        printTotals(printer, total, mealExpenses);
+    }
+
+    private void printExpenses(ReportPrinter printer) {
         for (Expense expense : expenses) {
 
             String name = "TILT";
@@ -36,8 +42,6 @@ public class ExpenseReport {
                             || (expense.type == BREAKFAST && expense.amount > 1000)) ? "X" : " ",
                     name, expense.amount / 100.0));
         }
-
-        printTotals(printer, total, mealExpenses);
     }
 
     private void totalsUpExpenses() {
