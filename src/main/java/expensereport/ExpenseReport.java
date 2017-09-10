@@ -13,9 +13,9 @@ public class ExpenseReport {
 
     public void printReport(ReportPrinter printer) {
 
+        totalsUpExpenses();
         printHeader(printer);
 
-        totalsUpExpenses();
 
         printExpenses(printer);
 
