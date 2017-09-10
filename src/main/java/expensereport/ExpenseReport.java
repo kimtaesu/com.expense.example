@@ -10,8 +10,10 @@ public class ExpenseReport {
     private List<Expense> expenses = new ArrayList<Expense>();
     private int mealExpenses;
     private int total;
+    private ReportPrinter printer;
 
     public void printReport(ReportPrinter printer) {
+        this.printer = printer;
 
         totalsUpExpenses();
         printHeader(printer);
