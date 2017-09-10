@@ -1,7 +1,7 @@
 package expensereport;
 
 public class BreakfastExpense extends Expense {
-    public BreakfastExpense(Type type, int amount) {
+    public BreakfastExpense(int amount) {
         super(type, amount);
     }
 }
