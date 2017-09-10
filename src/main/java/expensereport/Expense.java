@@ -1,15 +1,6 @@
 package expensereport;
 
-import static expensereport.Expense.Type.BREAKFAST;
-import static expensereport.Expense.Type.DINNER;
-
-public abstract class Expense {
-    abstract boolean isOverage();
-
-    abstract String getName();
-
-    abstract boolean isMeal();
-
+public class Expense {
     public enum Type {DINNER, BREAKFAST, CAR_RENTAL}
 
     public Type type;
