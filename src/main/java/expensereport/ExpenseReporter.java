@@ -24,15 +24,6 @@ public class ExpenseReporter {
                     expense.getName(), expense.amount / 100.0));
     }
 
-    private void totalsUpExpenses() {
-        expenseReport.totalsUpExpenses();
-    }
-
-    private void totalUpExpense(Expense expense) {
-
-        expenseReport.totalUpExpense(expense);
-    }
-
     private void printTotals() {
         printer.print(String.format("\nMeal expenses $%.02f", expenseReport.mealExpenses / 100.0));
         printer.print(String.format("\nTotal $%.02f", expenseReport.total / 100.0));
