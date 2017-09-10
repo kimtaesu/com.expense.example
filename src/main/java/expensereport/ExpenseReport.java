@@ -15,12 +15,7 @@ public class ExpenseReport {
 
         printHeader(printer);
 
-        for (Expense expense : expenses) {
-            if (expense.type == BREAKFAST || expense.type == DINNER)
-                mealExpenses += expense.amount;
-
-            total += expense.amount;
-        }
+        totalsUpExpenses();
 
         for (Expense expense : expenses) {
 
@@ -43,6 +38,15 @@ public class ExpenseReport {
         }
 
         printTotals(printer, total, mealExpenses);
+    }
+
+    private void totalsUpExpenses() {
+        for (Expense expense : expenses) {
+            if (expense.type == BREAKFAST || expense.type == DINNER)
+                mealExpenses += expense.amount;
+
+            total += expense.amount;
+        }
     }
 
     private void printTotals(ReportPrinter printer, int total, int mealExpenses) {
